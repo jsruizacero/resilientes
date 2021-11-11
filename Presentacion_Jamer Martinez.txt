@@ -1,0 +1,9 @@
+
+Mi nombre es Jamer Martinez Guerra,
+CC # 72188246
+Hago parte del programa mision TIC 2022
+inscrito en el programa desarrollo de software grupo # 15
+ciclo 4 de la Universidad de Antioquia.
+Dessarrollando el primer Sprint con mi Equipo de trabajo llamado RESILIENTES
+en la construccuion de una aplicacion Web que nos permita plantear un modelo de sistema de información que soporte la gestión de proyectos de investigación y mejore los procesos. 
+ 
