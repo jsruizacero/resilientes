@@ -8,6 +8,10 @@ const PROYECTOS = gql`
       presupuesto
       fechaInicio
       fechaFin
+      lider
+      # # lider
+      # estado
+      # fase
       # objetivos {
       #   descripcion
       #   tipo

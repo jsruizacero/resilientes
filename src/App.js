@@ -33,7 +33,7 @@ function App() {
     // link: httpLink,
   });
 
-  const [userData, setUserData] = useState({})
+  const [userData, setUserData] = useState([])
 
   return (
     <div className="App">

@@ -36,7 +36,6 @@ export const ModalAdicionarUsuarios = ({ isOpen, toggle, usuario }) => {
   };
 
   useEffect(() => {
-    console.log(usuario)
     if (usuario) {
       setNombre(usuario.nombre);
       setApellido(usuario.apellido);

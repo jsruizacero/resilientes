@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { useMutation, useQuery } from "@apollo/client";
 import { GET_USUARIOS } from "../../graphql/usuarios/queries";
 import { ELIMINAR_USUARIO } from "../../graphql/usuarios/mutations";
@@ -10,8 +10,12 @@ import ModalAdicionarUsuarios from "./ModalAdicionarUsuarios";
 import { Trash } from "@styled-icons/bootstrap/Trash";
 import { UserPlus } from "@styled-icons/boxicons-regular/UserPlus";
 import { PageTemplate } from "../../components/pageTemplate";
+import { useUser } from '../../context/userContext';
+
+
 
 const IndexUsuarios = () => {
+  const { setUserData } = useUser()
   const { data, error, loading } = useQuery(GET_USUARIOS);
   const [abreModal, setAbreModal] = useState(false);
   const toggle = () => setAbreModal(!abreModal);
@@ -24,6 +28,13 @@ const IndexUsuarios = () => {
       toast.error("Un Error inesperado ocurrio");
     }
   }, [error, errorDeleting]);
+
+  useEffect(() => {
+    if(data) {
+      setUserData(data?.Usuarios)
+    }
+    // eslint-disable-next-line
+  }, [])
 
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState({});
 
